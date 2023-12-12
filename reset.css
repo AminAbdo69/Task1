@@ -1,7 +1,5 @@
-/*
-  1. Use a more-intuitive box-sizing model.
-*/
-*,
+/* 1. Use a more-intuitive box-sizing model.
+*/ 
 *::before,
 *::after {
   box-sizing: border-box;
@@ -11,6 +9,7 @@
 */
 * {
   margin: 0;
+  padding: 0;
 }
 /*
   Typographic tweaks!
@@ -56,6 +55,7 @@ h6 {
 }
 a {
   text-decoration: none;
+  color: inherit;
 }
 button {
   background: transparent;
