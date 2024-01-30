@@ -591,7 +591,8 @@ html{
 }
 
 .footer-bottom {
-  border-bottom: 1px solid var(--primary-2);
+  margin-top: 25px;
+  border-top: 1px solid var(--primary-2);
 }
 .footer-bottom > div {
   color: var(--primary-2);
