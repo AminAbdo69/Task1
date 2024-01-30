@@ -86,3 +86,24 @@ numbers.forEach(numm => {
     }
   }, dur /  Number(numm.dataset.value))
 })
+// Start Services 
+  let taps = document.querySelectorAll(".tabs li");
+  let panels = document.querySelectorAll(".panels .panel");
+
+  taps.forEach((t , i)=>{
+    t.onclick=function(e){
+      if(e.target.classList.contains("active")){
+        return;
+      }else{
+        document.querySelector(".tabs li.active").classList.remove("active");
+        e.target.classList.add("active");
+        changePanel(i);
+      }
+    }
+  })
+
+  function changePanel(i){
+    document.querySelector(".panel.active").classList.remove("active");
+    panels[i].classList.add("active");
+  }
+// End Services 

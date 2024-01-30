@@ -14,6 +14,19 @@
   --light: #f8f9fa;
   --dark: #343a40;
 }
+html{
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+  width:10px ;
+}
+::-webkit-scrollbar-track{
+  background-color: white;
+}
+::-webkit-scrollbar-thumb{
+  background-color: var(--primary-4);
+  border-radius: 999px;
+}
 
 .header {
   background: var(--primary-5);
@@ -44,7 +57,7 @@
 
 .header-title {
   padding-block: 50px;
-  color: var(--primary-5);
+  color: var(--secondary);
   font-size: 24px;
 }
 .sr-only
@@ -334,6 +347,58 @@
 .form-links a:hover {
   color: var(--accent);
 }
+/* start Services */
+.services{
+  padding:130px 32px ;
+}
+
+.services .services-title{
+  text-align: center;
+  font-size: 36px;
+  color: var(--primary-6);
+  padding-bottom: 32px;
+  font-weight: 400;
+}
+.services ul{
+  background-color:var(--light) ;
+  color: var(--primary-2);
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  padding-block:8px;
+  margin-bottom: 16px;
+}
+.services ul li:hover , .services ul li.active{
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  color: var(--primary-4);
+}
+
+.panel {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.panel .panel-link{
+  display: grid;
+  place-content: center;
+  padding: 16px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 16px;
+  background-color: var(--primary-5);
+  color: white;
+  flex-basis: 25%;
+  
+}
+.panel:not(.active){
+  display: none;
+}
+
+/* End Services */
+
 
 /* utilities */
 .text-white {
@@ -382,20 +447,7 @@
 }
 
 
-.scroll-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  background-color: var(--primary-6);
-  bottom: 15px;
-  right: 10px;
-  z-index: 500;
-  cursor: pointer;
-}
+
 
 .circle-container {
   
@@ -586,3 +638,42 @@
 }
 
 /* End footer */
+
+.scroll-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-6);
+  bottom: 15px;
+  right: 10px;
+  z-index: 500;
+  cursor: pointer;
+}
+.fixed-btns{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  bottom: 15px;
+  left: 10px;
+  z-index: 500;
+  gap: 8px;
+}
+.fixed-btns button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-6);
+  cursor: pointer;
+}
+.fixed-btns button:hover ,.scroll-btn:hover{
+  background-color: #1e1466 ;
+}
